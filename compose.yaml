@@ -1,0 +1,15 @@
+name: piper_docker
+
+services:
+  pika:
+    build:
+      context: ./pika_piper
+      target: pika
+    ports: 
+      - "8080:8080"
+  pika_remote_piper:
+    build:
+      context: ./pika_piper
+      target: pika_remote_piper
+    ports: 
+      - "8081:8080"
